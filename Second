@@ -1,0 +1,50 @@
+#include <iostream.h>
+
+int main()
+{
+
+	int flag = 0, x, y, z;
+	cin >> x;
+	if (x % 2 == 0)
+		flag++;
+	cin >> y;
+	if (y % 2 == 0)
+		flag++;
+	cin >> z;
+	if (z % 2 == 0)
+		flag++;
+
+	if (flag == 3)
+	{
+		if (x > y&& x > z)
+			cout << "x = " << x;
+		if (y > x&& y > z)
+			cout << "y = " << y;
+		if (z > x&& z > y)
+			cout << "z = " << z;
+	}
+	if (flag < 3)
+	{
+		if (x % 2 == 0)
+		{
+			cout << "x = " << x * y * z;
+			goto m;
+		}
+		if (y % 2 == 0)
+		{
+			cout << "y = " << x * y * z;
+			goto m;
+		}
+
+		if (z % 2 == 0)
+		{
+			cout << "z = " << x * y * z;
+			goto m;
+		}
+	}
+m:
+	;
+
+	system(" pause >0");
+	return 0;
+}
